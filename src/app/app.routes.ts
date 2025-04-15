@@ -12,4 +12,8 @@ export const routes: Routes = [
   { path: 'rooms', component: RoomsComponent },
   { path: 'amenities', component: AmenitiesComponent },
   { path: 'contact', component: ContactComponent },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  }
 ];
