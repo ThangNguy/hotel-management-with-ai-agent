@@ -1,0 +1,56 @@
+<section class="rooms-section" id="rooms">
+  <div class="container">
+    <div class="section-header">
+      <h2>Các Loại Phòng</h2>
+      <p>Khám phá các lựa chọn phòng sang trọng của chúng tôi</p>
+    </div>
+    
+    <div class="rooms-grid">
+      @for (room of rooms; track room.id) {
+        <mat-card class="room-card">
+          <img mat-card-image [src]="room.imageUrl" alt="{{room.name}}" class="room-image">
+          <mat-card-content>
+            <h3>{{room.name}}</h3>
+            <p class="room-description">{{room.description}}</p>
+            
+            <div class="room-amenities">
+              @for (amenity of room.amenities.slice(0, 5); track amenity) {
+                <span class="amenity-item">
+                  <mat-icon class="amenity-icon">check_circle</mat-icon>
+                  {{amenity}}
+                </span>
+              }
+              
+              @if (room.amenities.length > 5) {
+                <span class="amenity-more">+ {{room.amenities.length - 5}} tiện ích khác</span>
+              }
+            </div>
+            
+            <div class="room-details">
+              <div class="room-info">
+                <div>
+                  <mat-icon>people</mat-icon> {{room.capacity}} người
+                </div>
+                <div>
+                  <mat-icon>aspect_ratio</mat-icon> {{room.size}} m²
+                </div>
+              </div>
+              
+              <div class="room-price">
+                <span class="price">{{formatPrice(room.price)}}</span>
+                <span class="per-night">/ đêm</span>
+              </div>
+            </div>
+          </mat-card-content>
+          
+          <mat-card-actions align="end">
+            <button mat-button color="primary" (click)="openRoomDetails(room)">
+              <mat-icon>info</mat-icon>
+              Xem chi tiết
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

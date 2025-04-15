@@ -1,0 +1,19 @@
+<header class="header">
+  <mat-toolbar color="primary">
+    <div class="container">
+      <div class="logo">
+        <a [routerLink]="['/']">
+          <mat-icon>hotel</mat-icon>
+          <span>{{ title }}</span>
+        </a>
+      </div>
+      
+      <nav class="navigation">
+        <a mat-button routerLink="/home" routerLinkActive="active">Trang chủ</a>
+        <a mat-button routerLink="/rooms" routerLinkActive="active">Phòng</a>
+        <a mat-button routerLink="/amenities" routerLinkActive="active">Tiện nghi</a>
+        <a mat-button routerLink="/contact" routerLinkActive="active">Liên hệ</a>
+      </nav>
+    </div>
+  </mat-toolbar>
+</header>

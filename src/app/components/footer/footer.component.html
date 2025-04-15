@@ -1,0 +1,66 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a [routerLink]="['/']">
+          <mat-icon>hotel</mat-icon>
+          <span>Luxury Hotel & Resort</span>
+        </a>
+        <p class="tagline">Trải nghiệm đẳng cấp sang trọng</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="link-column">
+          <h3>Khách sạn</h3>
+          <ul>
+            <li><a routerLink="/about">Về chúng tôi</a></li>
+            <li><a routerLink="/rooms">Phòng</a></li>
+            <li><a routerLink="/amenities">Tiện nghi</a></li>
+            <li><a routerLink="/contact">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <div class="link-column">
+          <h3>Dịch vụ</h3>
+          <ul>
+            <li><a routerLink="/restaurant">Nhà hàng</a></li>
+            <li><a routerLink="/spa">Spa & Massage</a></li>
+            <li><a routerLink="/gym">Phòng tập gym</a></li>
+            <li><a routerLink="/pool">Hồ bơi</a></li>
+          </ul>
+        </div>
+        
+        <div class="link-column">
+          <h3>Hỗ trợ</h3>
+          <ul>
+            <li><a routerLink="/faq">FAQ</a></li>
+            <li><a routerLink="/terms">Điều khoản sử dụng</a></li>
+            <li><a routerLink="/privacy">Chính sách bảo mật</a></li>
+            <li><a routerLink="/careers">Tuyển dụng</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="copyright">
+        © {{currentYear}} Luxury Hotel & Resort. Đã đăng ký bản quyền.
+      </div>
+      
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <mat-icon>facebook</mat-icon>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <mat-icon>twitter</mat-icon>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <mat-icon>photo_camera</mat-icon>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <mat-icon>smart_display</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
