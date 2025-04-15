@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { AmenitiesComponent } from '../amenities/amenities.component';
 import { RoomsComponent } from '../rooms/rooms.component';
 import { ContactComponent } from '../contact/contact.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
@@ -15,7 +16,8 @@ import { ContactComponent } from '../contact/contact.component';
     ReactiveFormsModule,
     AmenitiesComponent,
     RoomsComponent,
-    ContactComponent
+    ContactComponent,
+    TranslateModule
   ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
@@ -23,7 +25,10 @@ import { ContactComponent } from '../contact/contact.component';
 export class HeroComponent implements OnInit {
   bookingForm!: FormGroup;
   
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private translateService: TranslateService
+  ) {}
   
   ngOnInit() {
     const today = new Date();
